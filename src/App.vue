@@ -1,28 +1,21 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-container fluid>
+      <v-app-bar color="orange" dark>
+        <v-spacer></v-spacer>
+        <v-btn outlined class="ml-3">Main</v-btn>
+        <v-btn outlined class="ml-3">Photos</v-btn>
+      </v-app-bar>
+    </v-container>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  data: () => ({
+    //
+  }),
+};
+</script>
