@@ -19,7 +19,8 @@ export default {
   },
   methods: {
     openPhoto() {
-      this.$emit('openPhoto', this.photo);
+      this.$store.commit('setCurrentPhoto', this.photo);
+      this.$store.commit('showDialog');
     },
   },
 };

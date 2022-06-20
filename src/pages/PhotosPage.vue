@@ -2,14 +2,9 @@
   <v-container>
     <PhotoForm @addPhoto="addPhoto" />
     <v-row>
-      <Photo
-        v-for="photo in $store.getters.getAllPhotos"
-        :photo="photo"
-        :key="photo.id"
-        @openPhoto="openPhoto"
-      />
+      <Photo v-for="photo in $store.getters.getAllPhotos" :photo="photo" :key="photo.id" />
     </v-row>
-    <PhotoDialog :photo="currentPhoto" v-model="dialogVisible" />
+    <PhotoDialog />
   </v-container>
 </template>
 
@@ -25,8 +20,8 @@ export default {
   },
   data: () => ({
     photos: [],
-    currentPhoto: {},
-    dialogVisible: false,
+    // currentPhoto: {},
+    // dialogVisible: false,
   }),
 
   mounted() {
